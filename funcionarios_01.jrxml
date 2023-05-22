@@ -3,6 +3,12 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="funcionarios_01" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="54bee836-d338-4929-ab56-5d6667690355">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ConnectionMySQLDocker"/>
+	<style name="estilo_cores_alternadas">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT} % 2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCFFFF"/>
+		</conditionalStyle>
+	</style>
 	<queryString language="SQL">
 		<![CDATA[SELECT id_funcionario, nome, data_nascimento, salario FROM funcionarios]]>
 	</queryString>
@@ -38,18 +44,20 @@
 	<columnHeader>
 		<band height="30" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="143" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="b2b90757-62e1-4732-bb20-af26699744a2">
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="b2b90757-62e1-4732-bb20-af26699744a2">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2549e0f-6522-4c47-ae9b-d473bf6c3e69"/>
 				</reportElement>
+				<box leftPadding="5"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Código]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="143" y="0" width="143" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="6109c2c4-5adf-4fe4-8c45-273f5f350c58">
+				<reportElement mode="Opaque" x="80" y="0" width="206" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="6109c2c4-5adf-4fe4-8c45-273f5f350c58">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8bee7fa1-64b9-4159-9526-a0829f743120"/>
 				</reportElement>
+				<box leftPadding="5"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
@@ -59,15 +67,17 @@
 				<reportElement mode="Opaque" x="286" y="0" width="143" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="16298e04-ce93-4a39-b5a3-461606302bfc">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc6d5e38-01f1-4df4-8c51-855208ea22ed"/>
 				</reportElement>
+				<box leftPadding="5"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Data de Nascimento]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="429" y="0" width="143" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="1a995988-ebeb-4b86-87ed-968a6adf3724">
+				<reportElement mode="Opaque" x="428" y="0" width="143" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="1a995988-ebeb-4b86-87ed-968a6adf3724">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fe45d4c7-1c30-4e2e-b067-2be9c93378ae"/>
 				</reportElement>
+				<box leftPadding="5"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
@@ -78,16 +88,17 @@
 	<detail>
 		<band height="30" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="143" height="30" uuid="53441120-c6c3-4e2f-9e45-a11838b63bdf">
+				<reportElement style="estilo_cores_alternadas" x="0" y="0" width="80" height="30" uuid="53441120-c6c3-4e2f-9e45-a11838b63bdf">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2549e0f-6522-4c47-ae9b-d473bf6c3e69"/>
 				</reportElement>
+				<box leftPadding="5"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{id_funcionario}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="143" y="0" width="143" height="30" uuid="3aab0440-5bb3-4ac4-b37c-a2a0bc81df4a">
+				<reportElement style="estilo_cores_alternadas" x="80" y="0" width="206" height="30" uuid="3aab0440-5bb3-4ac4-b37c-a2a0bc81df4a">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8bee7fa1-64b9-4159-9526-a0829f743120"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
@@ -96,7 +107,7 @@
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="286" y="0" width="143" height="30" uuid="6ab4726c-9912-4eb5-86ac-a4ebf2d2e120">
+				<reportElement style="estilo_cores_alternadas" x="286" y="0" width="143" height="30" uuid="6ab4726c-9912-4eb5-86ac-a4ebf2d2e120">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc6d5e38-01f1-4df4-8c51-855208ea22ed"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
@@ -105,7 +116,7 @@
 				<textFieldExpression><![CDATA[$F{data_nascimento}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="429" y="0" width="143" height="30" uuid="1d40896a-ca0b-4f49-ab6e-69bf7bf20b40">
+				<reportElement style="estilo_cores_alternadas" x="428" y="0" width="143" height="30" uuid="1d40896a-ca0b-4f49-ab6e-69bf7bf20b40">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fe45d4c7-1c30-4e2e-b067-2be9c93378ae"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
