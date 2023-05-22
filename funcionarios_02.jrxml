@@ -80,13 +80,15 @@ FROM funcionarios f, empresas e]]>
 			</textField>
 			<textField>
 				<reportElement x="143" y="0" width="143" height="30" uuid="d267a687-07af-45d0-a92b-fb32fb80ea5f"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>CNPJ:</b> " + $F{cnpj}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="286" y="0" width="143" height="30" uuid="af083286-22fa-4a70-ba4f-39a6f2b8d0d9"/>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["(" + $F{telefone}.substring( 0, 2 ) + ")" + " " +  $F{telefone}.substring( 2, 6 ) + "-" +  $F{telefone}.substring( 6,10 )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="429" y="0" width="143" height="30" uuid="6e469c70-eecf-4a9e-9700-2ef759a7cb5d"/>
@@ -160,7 +162,7 @@ FROM funcionarios f, empresas e]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField pattern="dd/MM/yyyy">
 				<reportElement style="estilo_cores_alternadas" x="286" y="0" width="143" height="30" uuid="6ab4726c-9912-4eb5-86ac-a4ebf2d2e120">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc6d5e38-01f1-4df4-8c51-855208ea22ed"/>
 				</reportElement>
@@ -169,7 +171,7 @@ FROM funcionarios f, empresas e]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{data_nascimento}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField pattern="¤ #,##0.00;¤ -#,##0.00">
 				<reportElement style="estilo_cores_alternadas" x="428" y="0" width="143" height="30" uuid="1d40896a-ca0b-4f49-ab6e-69bf7bf20b40">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fe45d4c7-1c30-4e2e-b067-2be9c93378ae"/>
 				</reportElement>
