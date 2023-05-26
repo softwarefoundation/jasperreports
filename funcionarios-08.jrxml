@@ -154,7 +154,7 @@ ORDER BY 	jaspercurso.funcionarios.nome ASC]]>
 				<text><![CDATA[Salário]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="estilo_cabecalho" x="217" y="0" width="160" height="30" uuid="bde37a64-0d05-45ba-a2f3-0c76ad2dc00f">
+				<reportElement style="estilo_cabecalho" x="217" y="0" width="192" height="30" uuid="bde37a64-0d05-45ba-a2f3-0c76ad2dc00f">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2379b7ad-c9c6-469e-8a42-9eb744028e50"/>
 				</reportElement>
 				<text><![CDATA[Endereço Residencial]]></text>
@@ -177,7 +177,7 @@ ORDER BY 	jaspercurso.funcionarios.nome ASC]]>
 				<text><![CDATA[Nível]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="estilo_cabecalho" x="377" y="0" width="87" height="30" uuid="5ee26ca0-d691-4d9e-a7b9-bbeec43e4e1d">
+				<reportElement style="estilo_cabecalho" x="400" y="0" width="64" height="30" uuid="5ee26ca0-d691-4d9e-a7b9-bbeec43e4e1d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8d44593-e51d-4b5b-a96a-4908f809be41"/>
 				</reportElement>
 				<textElement textAlignment="Center"/>
@@ -206,8 +206,8 @@ ORDER BY 	jaspercurso.funcionarios.nome ASC]]>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement style="estilo_corpo" x="217" y="0" width="160" height="30" uuid="7163afc6-9518-4a25-bdad-0f2d08f69d3f">
+			<textField textAdjust="ScaleFont">
+				<reportElement style="estilo_corpo" x="217" y="0" width="183" height="30" uuid="7163afc6-9518-4a25-bdad-0f2d08f69d3f">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2379b7ad-c9c6-469e-8a42-9eb744028e50"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
@@ -232,7 +232,7 @@ $F{nivel}.equals("JUNIOR")? "JR" :
 $F{nivel}.equals("SENIOR")? "SR" : "PL"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="estilo_corpo" x="377" y="0" width="87" height="30" uuid="785120cb-d68c-4b01-ac90-5f10961d1a7b">
+				<reportElement style="estilo_corpo" x="400" y="0" width="64" height="30" uuid="785120cb-d68c-4b01-ac90-5f10961d1a7b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8d44593-e51d-4b5b-a96a-4908f809be41"/>
 				</reportElement>
 				<textElement textAlignment="Center"/>
