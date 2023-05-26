@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="funcionarios_04" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="54bee836-d338-4929-ab56-5d6667690355">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="funcionarios_04" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true" isSummaryNewPage="true" isSummaryWithPageHeaderAndFooter="true" isFloatColumnFooter="true" uuid="54bee836-d338-4929-ab56-5d6667690355">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ConnectionMySQLDocker"/>
 	<style name="estilo_cores_alternadas">
@@ -65,10 +65,10 @@ FROM funcionarios f, empresas e]]>
 	<variable name="SALARIO_MEDIA_GERAL" class="java.math.BigDecimal" calculation="Average">
 		<variableExpression><![CDATA[$F{salario}]]></variableExpression>
 	</variable>
-	<variable name="MAIOR_SALARIO" class="java.math.BigDecimal" resetType="Page" calculation="Highest">
+	<variable name="MAIOR_SALARIO" class="java.math.BigDecimal" calculation="Highest">
 		<variableExpression><![CDATA[$F{salario}]]></variableExpression>
 	</variable>
-	<variable name="MENOR_SALARIO" class="java.math.BigDecimal" resetType="Page" calculation="Lowest">
+	<variable name="MENOR_SALARIO" class="java.math.BigDecimal" calculation="Lowest">
 		<variableExpression><![CDATA[$F{salario}]]></variableExpression>
 	</variable>
 	<background>
